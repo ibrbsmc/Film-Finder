@@ -25,11 +25,11 @@ html, body {
   background: transparent;
   height: 50px;
   display: flex;
-  justify-content: center;
-  justify-self: center;
+  justify-content: center !important;
+  justify-self: center !important;
   position: relative;
   top: 25px;
-  align-items: center;
+  align-items: center !important;
   text-align: center;
   border-radius: 50px;
   border: 2px solid #1f1f1f;
@@ -260,6 +260,12 @@ html, body {
     font-size: 0.6em !important;
     padding: 8px !important;
     margin: -5px !important;
+  }
+  .mini-header {
+    margin: auto;
+    display:flex;
+    align-items:center;
+    justify-content:center;
   }
 }
 .com-button{
