@@ -1,0 +1,274 @@
+@import url('https://fonts.cdnfonts.com/css/monster-chiller');
+@import url('https://fonts.cdnfonts.com/css/sf-cartoonist-hand');
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  background: url(/back3.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow-x: hidden;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.mini-header {
+  width: 10%;
+  min-width: 100px;
+  max-width: 250px;
+  /* background: linear-gradient(gray, silver, #eee); */
+  background: transparent;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  justify-self: center;
+  position: relative;
+  top: 25px;
+  align-items: center;
+  text-align: center;
+  border-radius: 50px;
+  border: 2px solid #1f1f1f;
+  box-shadow: 0 0 30px black;
+  color: #eeee;
+  text-shadow: 2px 2px 2px black;
+}
+
+.mini-header:hover {
+  color: gray;
+  text-shadow: 2px 2px 2px black;
+  transition: .5s;
+}
+
+.header-title {
+  font-size: 1.3em;
+  font-family: 'Monster Chiller', sans-serif;
+  cursor: pointer;
+}
+
+.search-main-div {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+  margin: 80px auto 0 auto;
+  width: 50%;
+}
+
+.search-button {
+  font-size: 0.7em !important;
+  margin-bottom: 60px !important;
+  color: #eeee !important;
+  background: transparent !important;
+  border-radius: 5px !important;
+  border: 1px solid black !important;
+  box-shadow: 2px 2px 2px black !important;
+}
+
+.search-button.Mui-disabled {
+  border: 1px solid black !important;
+  color: gray;
+}
+
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+  justify-content: center;
+}
+
+.card-container {
+  perspective: 1200px;
+  width: 200px;
+  height: 300px;
+  cursor: pointer;
+}
+
+.card-flip {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.8s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+
+.card-container:hover .card-flip {
+  transform: rotateY(180deg);
+}
+
+.card-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  backface-visibility: hidden;
+}
+
+.card-front img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  color: #fff;
+}
+
+.card-back::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(8px);
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+.card-back-overlay {
+  position: relative;
+  z-index: 1;
+  padding: 1rem;
+}
+
+.card-title {
+  font-weight: bolder;
+  font-style: italic;
+  margin-bottom: 0.5rem !important;
+  color: white;
+  text-shadow: 2px 2px 2px black;
+}
+
+.card-subtitle {
+  font-size: 0.7rem !important;
+  opacity: 0.9;
+  color: silver;
+  text-shadow: 2px 2px 2px black;
+}
+
+.input .MuiInput-underline:before {
+  border-bottom: 2px solid white !important;
+}
+
+.input .MuiInput-underline:after {
+  border-bottom: 2px solid white !important;
+}
+.input{
+  position: relative;
+  top: 20px;
+}
+
+.input label {
+  color: silver !important;
+  font-family: 'Monster Chiller', sans-serif !important;
+  font-size: 1.1em;
+  transform: translate(0, .8rem) scale(1);
+}
+
+.input label.MuiInputLabel-shrink {
+  transform: translate(0, -.5rem) scale(0.75);
+}
+
+.input label.Mui-focused {
+  color: white !important;
+}
+
+.input .MuiInputBase-input {
+  color: white !important;
+}
+
+.listpage-text {
+  font-family: 'SF Cartoonist Hand', sans-serif;
+  font-size: 1.3em;
+  text-shadow: 2px 2px 2px black;
+}
+
+.listpage-card-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 5rem;
+  justify-content: center;
+}
+
+.detail-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  color: white;
+  gap: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+  overflow: hidden;
+  padding: 10px;
+}
+
+.detail-title {
+  margin-top: 60px;
+  display: flex;
+  text-align: center;
+  flex-wrap: wrap;
+  font-size: 1.2em !important;
+}
+
+.detail-date {
+  font-size: .8em;
+}
+
+.detail-desc {
+  font-size: .8em;
+  font-weight: bold;
+  width: 80%;
+  text-align: center;
+}
+
+.detail-img {
+  margin-top: 15px !important;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+@media (max-width: 576px) {
+  .input label{
+    font-size: .75em;
+    transform: translate(0, .8rem) scale(1.2);
+  }
+  .search-button {
+    font-size: 0.6em !important;
+    padding: 8px !important;
+    margin: -5px !important;
+
+  }
+  
+  .search-button.Mui-disabled {
+    font-size: 0.6em !important;
+    padding: 8px !important;
+    margin: -5px !important;
+  }
+}
+.com-button{
+  font-size: .7em !important;
+  font-weight: bolder;
+  color: #eeee !important;
+  background: transparent !important;
+  border-radius: 5px !important;
+  border: 1px solid black !important;
+  box-shadow: 2px 2px 2px black !important;
+  padding: 10px 20px !important;
+}
