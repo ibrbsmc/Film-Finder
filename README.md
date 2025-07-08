@@ -24,7 +24,7 @@ Kullanıcılar filmleri arayabilir, detaylarını görebilir, favorilere ekleyeb
 Projeyi klonlayın ve klasöre girin:
 
 ```bash
-git clone https://github.com/<kullanici-adi>/<repo-adi>.git
+git clone https://github.com/ibrbsmc/Film-Finder.git
 cd mvpr
 ```
 
